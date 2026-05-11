@@ -1,0 +1,52 @@
+# Build artifacts
+bin/
+obj/
+out/
+
+# Publish output
+publish/
+*.publishproj
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userprefs
+
+# IDE / Editor settings
+.vs/
+.vscode/
+.idea/
+
+# Visual Studio files
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Rider
+*.sln.iml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test and coverage outputs
+TestResults/
+*.coverage
+*.coveragexml
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
