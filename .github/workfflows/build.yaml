@@ -35,6 +35,7 @@
 # For more information on GitHub Actions, refer to https://github.com/features/actions
 # For a complete CI/CD sample to get started with GitHub Action workflows for Desktop Applications,
 # refer to https://github.com/microsoft/github-actions-for-desktop-apps
+
 name: Build CompareIt
 
 on:
@@ -64,10 +65,10 @@ jobs:
         run: dotnet build CompareIt.sln -c Release --no-restore
 
       - name: Publish self-contained exe
-        run: dotnet publish CompareIt.csproj -c Release -r win-x64 /p:SelfContained=true /p:PublishSingleFile=true /p:PublishReadyToRun=true --no-build
+        run: dotnet publish CompareIt.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishReadyToRun=true -o ./publish-output
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: CompareIt-win-x64
-          path: bin/Release/net8.0-windows/win-x64/publish/*
+          path: ./publish-output/*
